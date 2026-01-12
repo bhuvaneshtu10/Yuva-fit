@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YUVAFIT</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+:root {
+    --primary: #008080;
+    --primary-glow: #5af1ff;
+    --dark: #1b1b1b;
+    --bg: #000;
+    --text: #ffffff;
+    --muted: #bdbdbd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 14px 40px;
+    background: linear-gradient(to right, var(--primary), #003f3f);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+header h4 {
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 90px; 
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(70%);
+    z-index: -2;
+    will-change: transform;
+}
+
+.hero::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 1;
+}
+
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.btn {
+    padding: 12px 32px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, var(--primary), var(--primary-glow));
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 25px rgba(90,241,255,0.6);
+}
+
+.section {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    font-size: 26px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+.card {
+    padding: 40px 25px;
+    text-align: center;
+    background: linear-gradient(135deg, #002f2f, var(--primary));
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+    transition: 0.3s;
+}
+.card-container a {
+    color: white;
+    text-decoration: none;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,128,128,0.6);
+}
+
+.contact-section {
+    padding: 90px 20px;
+}
+
+.contact-card {
+    max-width: 620px;
+    margin: auto;
+    padding: 45px;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #003737, #001f1f);
+    border: 1px solid rgba(90,241,255,0.15);
+}
+
+.contact-card h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 35px;
+    color: var(--primary-glow);
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--muted);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.05);
+    border: 1.5px solid rgba(255,255,255,0.2);
+    color: var(--text);
+    outline: none;
+    transition: 0.3s;
+}
+
+textarea {
+    resize: none;
+    min-height: 140px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary-glow);
+    box-shadow: 0 0 0 3px rgba(90,241,255,0.15);
+}
+
+.contact-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(90deg, var(--primary), var(--primary-glow));
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(90,241,255,0.5);
+}
+
+.footer {
+    background: linear-gradient(135deg, #111, #222);
+    padding: 45px 20px 15px;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 40px;
+}
+
+.footer h4 {
+    color: var(--primary-glow);
+    margin-bottom: 12px;
+}
+
+.footer p,
+.footer a {
+    font-size: 15px;
+    color: var(--muted);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--primary-glow);
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    gap: 14px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-glow);
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--primary-glow);
+    color: #000;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #9a9a9a;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    header {
+        padding: 14px 20px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h4>YUVAFIT</h4>
+    <nav>
+        <ul>
+            <li><a href="yoga.html">Yoga</a></li>
+            <li><a href="gym.html">Gym</a></li>
+            <li><a href="walking.html">Walking</a></li>
+            <li><a href="jogging.html">Jogging</a></li>
+            <li><a href="ai.html">AI Assistant</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <video autoplay muted loop playsinline>
+        <source src="sample.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-content">
+        <h1>Transform Your Body with YUVAFIT</h1>
+        <p>Your ultimate fitness partner — Yoga, Gym & AI Coaching</p>
+        <button class="btn">Get Started</button>
+    </div>
+</section>
+
+<section class="section">
+    <h3 class="section-title">Our Features</h3>
+    <div class="card-container">
+        <div class="card"><h4><a href="coach.html">Join as a Coach</a></h4></div>
+        <div class="card"><h4><a href="bmi.html">Track Your health</a></h4></div>
+        <div class="card"><h4>Personalized Plans</h4></div>
+    </div>
+</section>
+<section class="section">
+    <h3 style="text-align:center;margin-bottom:30px;">Have questions? Contact us</h3>
+    <div class="card-container">
+        <div class="card">
+            <h4>Email</h4>
+            <p>bhuvaneshwarantu1004@gmail.com</p>
+        </div>
+        <div class="card">
+            <h4>Phone</h4>
+            <p>9043079096</p>
+        </div>
+    </div>
+</section>
+<section class="contact-section">
+    <div class="contact-card">
+        <h2>Send Us a Message</h2>
+
+        <form>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea placeholder="Type your message here..."></textarea>
+            </div>
+
+            <button class="contact-btn">Send Message ✈</button>
+        </form>
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div>
+            <h4>About YUVAFIT</h4>
+            <p>YUVAFIT helps you stay fit through yoga, workouts and AI-powered guidance.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div>
+            <h4>Quick Links</h4>
+            <p><a href="#">Yoga</a></p>
+            <p><a href="#">Gym</a></p>
+            <p><a href="#">Workout Plans</a></p>
+            <p><a href="#">AI Assistant</a></p>
+        </div>
+
+        <div>
+            <h4>Contact</h4>
+            <p>bhuvaneshwarantu1004@gmail.com</p>
+            <p>9043079096</p>
+        </div>
+    </div>
+<hr>
+    <div class="footer-bottom">
+        © 2026 YUVAFIT • All Rights Reserved
+    </div>
+</footer>
+
+</body>
+</html>

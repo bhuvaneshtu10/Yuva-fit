@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuvafit-Yoga</title>
+
+    <style>
+        :root {
+            --primary: #008080;
+            --dark: #1b1b1b;
+            --text: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: cursive;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 14px 40px;
+            background: linear-gradient(to right, var(--primary), #003f3f);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+
+        nav ul li a:hover {
+            background-color: var(--primary);
+        }
+        h4 a{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <h4><a href="index.html">Yuvafit</a></h4>
+        <nav>
+            <ul>
+                <li><a href="gym.html">Gym</a></li>
+                <li><a href="walking.html">Walking</a></li>
+                <li><a href="jogging.html">Jogging</a></li>
+                <li><a href="ai.html">AI Assistant</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="hero-content">
+        <h1>Breathe in peace. Breathe out stress</h1>
+    </div>
+</body>
+</html>
