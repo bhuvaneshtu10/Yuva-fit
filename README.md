@@ -53,11 +53,6 @@ Diet recommendations
 
 Motivation & tips
 
-✔ Firebase Firestore Integration
-
-Stores user information
-
-Loads personalized data into dashboard
 # Status
 Still under development
 (currently the dashboard page alone has been designed)
