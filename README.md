@@ -55,4 +55,3 @@ Motivation & tips
 
 # Status
 Still under development
-(currently the dashboard page alone has been designed)
