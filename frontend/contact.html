@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YUVAFIT | Contact</title>
+
+<style>
+:root {
+    --primary: #1cadad;
+    --primary-glow: #46d0dc;
+    --dark: #1b1b1b;
+    --bg: #000;
+    --text: #ffffff;
+    --muted: #bdbdbd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ===== Header ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 14px 40px;
+    background: linear-gradient(to right, var(--primary), #026464);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+header h4 a {
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ===== Contact Section ===== */
+.contact-section {
+    min-height: 100vh;
+    padding: 120px 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card {
+    width: 100%;
+    max-width: 620px;
+    padding: 45px;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #003737, #001f1f);
+    border: 1px solid rgba(90,241,255,0.15);
+}
+
+.contact-card h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 35px;
+    color: var(--primary-glow);
+}
+
+/* ===== Form ===== */
+.form-group {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(90,241,255,0.2);
+    background: #000;
+    color: var(--text);
+    outline: none;
+    transition: 0.3s;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary-glow);
+    box-shadow: 0 0 12px rgba(90,241,255,0.3);
+}
+
+.contact-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(90deg, var(--primary), var(--primary-glow));
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(90,241,255,0.5);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h4><a href="index.html">YUVAFIT</a></h4>
+    <nav>
+        <ul>
+            <li><a href="yoga.html">Yoga</a></li>
+            <li><a href="gym.html">Workout Plans</a></li>
+            <li><a href="walking.html">Walking</a></li>
+            <li><a href="ai.html">AI Assistant</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="contact-section">
+    <div class="contact-card">
+        <h2>Send Us a Message</h2>
+
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Type your message here..." required></textarea>
+            </div>
+
+            <button class="contact-btn">Send Message ✈</button>
+        </form>
+    </div>
+</section>
+
+</body>
+</html>

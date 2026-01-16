@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>YUVAFIT – Day 2 Workout</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --primary: #1aa2a2;
+            --dark: #004d4d;
+            --light: #eaffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0f7f7, #c6eeee);
+            font-family: cursive;
+            color: #033;
+            padding-top: 90px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 14px 40px;
+            background: linear-gradient(to right, var(--primary), var(--dark));
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h4 a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: cursive;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 18px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: 0.3s;
+            font-size: 14px;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        .workout-card {
+            background: linear-gradient(135deg, var(--primary), #007a7a);
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            width: 60%;
+            margin: 18px auto;
+            background: linear-gradient(to right, transparent, #5af1ff, transparent);
+        }
+
+        section {
+            margin-bottom: 22px;
+        }
+
+        section h4 {
+            margin-bottom: 8px;
+            font-size: 18px;
+            color: #eaffff;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 6px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .exercise {
+            margin-top: 10px;
+            padding-left: 10px;
+            border-left: 3px solid #5af1ff;
+        }
+
+        .exercise h5 {
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+            .footer{
+                background: linear-gradient(135deg, #111, #222);
+                padding: 10px;
+                color: #9a9a9a;
+                font-size: small;
+                text-align: center;
+            }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h4><a href="index.html">YUVAFIT</a></h4>
+        <ul>
+            <li><a href="d1.html">Day-1</a></li>
+            <li><a href="d2.html">Day-2</a></li>
+            <li><a href="d4.html">Day-4</a></li>
+            <li><a href="d5.html">Day-5</a></li>
+            <li><a href="d6.html">Day-6</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="workout-card">
+
+        <h3>Day-3: LEGS & CORE</h3>
+        <p class="subtitle">stability, and core endurance</p>
+        <hr>
+
+        <section>
+            <h4>🎯 Focus</h4>
+            <ul>
+                <li>Quads, hamstrings, glutes</li>
+                <li>Core strength & balance</li>
+                <li>Functional lower-body power</li>
+            </ul>
+        </section>
+
+        <section>
+            <h4>🔥 Warm-Up (10 minutes)</h4>
+            <ul>
+                <li>5 min brisk walk / cycling</li>
+                <li>Bodyweight squats – 2 × 15</li>
+                <li>Leg swings (front & side) – 2 × 15 each</li>
+                <li>Hip circles – 2 × 10</li>
+            </ul>
+        </section>
+
+        <section>
+            <h4>🦵 LEG WORKOUT</h4>
+
+            <div class="exercise">
+                <h5>Barbell Squats / Goblet Squats</h5>
+                <ul>
+                    <li>4 sets × 8–12 reps</li>
+                    <li>Rest: 90 seconds</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h5>Leg Press</h5>
+                <ul>
+                    <li>3 sets × 10–12 reps</li>
+                    <li>Rest: 75 seconds</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h5>Walking Lunges (Dumbbell / Bodyweight)</h5>
+                <ul>
+                    <li>3 sets, 10 steps per leg</li>
+                    <li>Rest: 60 seconds</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h5>Leg Curl (Machine / Resistance Band)</h5>
+                <ul>
+                    <li>3 sets × 12-15 reps</li>
+                    <li>Rest: 60 seconds</li>
+                </ul>
+            </div>
+            <div class="exercise">
+                <h5>Standing Calf Raises</h5>
+                <ul>
+                    <li>4 sets × 15-20 reps</li>
+                    <li>Rest: 45 seconds</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h4>🔥 CORE WORKOUT</h4>
+
+            <div class="exercise">
+                <h5>Plank</h5>
+                <ul>
+                    <li>3 sets × 30-60 sec</li>
+                    <li>Rest: 45 seconds</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h5>Hanging Leg Raises / Lying Leg Raises</h5>
+                <ul>
+                    <li>3 sets × 12-15 reps</li>
+                    <li>Rest: 60 seconds</li>
+                </ul>
+            </div>
+
+            <div class="exercise">
+                <h5>Russian Twists</h5>
+                <ul>
+                    <li>3 sets × 20 twists</li>
+                    <li>Rest: 45 seconds</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h4>🧊 Cool-Down</h4>
+            <ul>
+                <li>Quad stretch – 30 sec × 2</li>
+                <li>Hamstring stretch – 30 sec × 2</li>
+                <li>Calf stretch – 30 sec × 2</li>
+                <li>Deep breathing</li>
+            </ul>
+        </section>
+
+    </div>
+</div>
+         <div class="footer">
+        <p>“Strong legs. Solid foundation.”</p>
+        <hr>
+        <h4>© 2026 YUVAFIT • All Rights Reserved</h4>
+    </div>
+</body>
+</html>
