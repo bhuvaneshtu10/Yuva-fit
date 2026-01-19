@@ -27,7 +27,6 @@ body {
     color: var(--text);
 }
 
-/* ===== Header ===== */
 header {
     position: fixed;
     top: 0;
@@ -65,7 +64,6 @@ nav a:hover {
     background: rgba(255,255,255,0.2);
 }
 
-/* ===== Contact Section ===== */
 .contact-section {
     min-height: 100vh;
     padding: 120px 20px 60px;
@@ -90,7 +88,6 @@ nav a:hover {
     color: var(--primary-glow);
 }
 
-/* ===== Form ===== */
 .form-group {
     margin-bottom: 22px;
 }
@@ -131,6 +128,7 @@ textarea:focus {
     padding: 15px;
     border-radius: 999px;
     border: none;
+    font-family: cursive;
     background: linear-gradient(90deg, var(--primary), var(--primary-glow));
     color: #000;
     font-weight: 600;
@@ -141,6 +139,51 @@ textarea:focus {
 .contact-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 18px 40px rgba(90,241,255,0.5);
+}
+.card{
+    border-radius: 16px;
+    background: linear-gradient(145deg, #003737, #001f1f);
+    margin: auto;
+     width: 100%;
+    max-width: 620px;
+    padding: 10px;
+}
+.card h4{
+    text-align: center;
+}
+.card a{
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    font-family: cursive;
+}
+.feedback-btn{
+    border-radius: 999px;
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-glow));
+    font-size: medium;
+}
+.footer{
+    background: linear-gradient(135deg, #111, #222);
+    text-align: center;
+    color: #9a9a9a;
+    margin: auto;
+}
+hr {
+  border: none;
+  height: 2px;
+  width: 60%;
+  margin: 20px auto;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #008080,
+    #5af1ff,
+    #008080,
+    transparent
+  );
 }
 </style>
 </head>
@@ -183,6 +226,15 @@ textarea:focus {
         </form>
     </div>
 </section>
-
+<div class="card">
+    <h4>We kindly request you to share your feedback.</h4>
+    <button class="feedback-btn"><a href="https://docs.google.com/forms/d/1onq0dR_5mosHabmy4UwNHCSA0tXVEXJBrO1EuxeiZG8/previewResponse">Feedback ✈</a></button>
+</div>
+<br>
+<div class="footer">
+    <h5>"Contact our technical department for any help or services"</h5>
+    <hr>
+    <h5>© 2026 YUVAFIT • All Rights Reserved</h5>
+</div>
 </body>
 </html>
